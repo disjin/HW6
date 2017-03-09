@@ -10,8 +10,5 @@
         
         <a href="read">View All Pokemons</a>
         
-        <br>
-        
-        Hello
     </body>
 </html>
