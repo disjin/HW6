@@ -9,6 +9,11 @@
     <% String table = (String) request.getAttribute("table"); %>
     <body>
         <h1>Dishuang's Pokemons</h1>
+        
         <%= table %>
+        
+        <br><br>
+        
+        <a href ="add">Add A New Pokemon</a>
     </body>
 </html>
