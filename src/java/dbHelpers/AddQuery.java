@@ -57,7 +57,7 @@ public class AddQuery {
     public void doAdd (Pokemons pokemon){
     
         try {
-            String query = "INSERT INTO pokemons (pokemonName, type, CP, candy) VALUES(?, ?, ?, ?)";
+            String query = "INSERT INTO pokemons (pokemonName, pokemonType, pokemonCP, pokemonCandy) VALUES(?, ?, ?, ?)";
             
             PreparedStatement ps = conn.prepareStatement(query);
             
