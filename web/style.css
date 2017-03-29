@@ -1,0 +1,40 @@
+table {
+    border-collapse: collapse;
+    border: 5px solid #FFFFFF;
+    width: 50%;
+}
+
+th {
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+td {
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #F08080;
+    color: #FFFFFF;
+}
+
+th, td {
+    padding: 2px;
+    border: 2px solid #FFFFFF;
+}
+
+tr:hover {background-color: #CCCCCC}
+
+tr:nth-child(even) {background-color: #F2F2F2}
+
+th {
+    background-color: #FFFF99;
+    color: #696969;
+}
+
+body {
+    background-color: #D2B48C;
+}
+
+ .right {text-align:left;}
+ .left {text-align:left;}
