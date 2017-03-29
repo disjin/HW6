@@ -67,9 +67,9 @@ public class ReadQuery {
         table += "<table>";
         
         table += "<tr>"; 
-        table += "<th>PokemonID</th>";
-        table += "<th>PokemonName</th>"; 
-        table += "<th>PokemonType</th>";
+        table += "<th>Pokemon ID</th>";
+        table += "<th>Pokemon Name</th>"; 
+        table += "<th>Pokemon Type</th>";
         table += "<th>CP</th>";
         table += "<th>Candy</th>"; 
         table += "<th>  </th>";
