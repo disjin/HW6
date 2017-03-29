@@ -5,12 +5,15 @@
  */
 package controller;
 
+import dbHelpers.AddQuery;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Pokemons;
 
 /**
  *
@@ -56,7 +59,9 @@ public class AddServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+        // Pass execution on to doPost
+            doPost(request, response);
     }
 
     /**
@@ -70,7 +75,31 @@ public class AddServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+            //get the data
+            String name = request.getParameter("name");
+            String type = request.getParameter("type");
+            int cp = Integer.parseInt(request.getParameter("cp"));
+            int candy = Integer.parseInt(request.getParameter("candy"));
+            
+            //set up a pokemon object
+            Pokemons pokemon = new Pokemons();
+            pokemon.setPokemonName(name);
+            pokemon.setPokemonType(type);
+            pokemon.setPokemonCP(cp);
+            pokemon.setPokemonCandy(candy);
+            
+            //set up an addQuery object
+            AddQuery aq = new AddQuery();
+            
+            //pass the pokemon to addQuery to add to the database
+            aq.doAdd(pokemon);
+            
+            //pass execution control to the ReadServlet
+            String url = "/read";
+            
+            RequestDispatcher dispatcher = request.getRequestDispatcher(url);
+            dispatcher.forward (request, response);
     }
 
     /**
