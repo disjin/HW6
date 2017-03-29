@@ -8,20 +8,45 @@
     </head>
     <body>
         <h1>Add A New Pokemon</h1>
+        <hr class="style">
         
         <form name="addForm" action="addPokemon" method="get">
             
-            <label>Pokemon Name:</label>
-            <input type="text" name="name" value="" />
-            <br>
-            <label>Type:</label>
-            <input type="text" name="type" value="" />
-            <br>
-            <label>CP:</label>
-            <input type="text" name="cp" value="" />
-            <br>
-            <label>Candy:</label>
-            <input type="text" name="candy" value="" />
+            <table>
+                <tr>
+                    <td class="right">
+                      Pokemon Name:  
+                    </td>
+                    <td class="left">
+                      <input type="text" name="name" value="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="right">
+                      Type:  
+                    </td>
+                    <td class="left">
+                      <input type="text" name="type" value="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="right">
+                      CP: 
+                    </td>
+                    <td class="left">
+                      <input type="text" name="cp" value="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="right">
+                       Candy:  
+                    </td>
+                    <td class="left">
+                       <input type="text" name="candy" value="" />
+                    </td>
+                </tr>                
+            </table>
+            
             <br>
             <input type="submit" name="submit" value="Submit" />            
         </form>
