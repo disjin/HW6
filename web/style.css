@@ -38,5 +38,8 @@ tr:hover {background-color: #CCCCCC;}
  
  .left {text-align:left;}
  
+ a.updateLink {color:#696969; text-decoration:none;}
+ a.updateLink:hover {color:#696969; text-decoration:underline;}
+ 
  a.deleteLink {color:#696969; text-decoration:none;}
  a.deleteLink:hover {color:#696969; text-decoration:underline;}
