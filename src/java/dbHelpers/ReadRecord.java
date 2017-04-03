@@ -58,15 +58,36 @@ public class ReadRecord {
     public void doRead(){
         
         try {
-            String query = "Select * from pokemons";
+            //set up a string to hold our query
+            String query = "SELECT * FROM pokemons WHERE pokemonID = ?";
             
-            PreparedStatement ps = conn.prepareStatement (query);
+            //create a preparedstatement using our query string
+            PreparedStatement ps = conn.prepareStatement(query);
+            
+            //fill in the preparedstatement
+            ps.setInt(1, pokemonID);
+            
+            //execute the query
             this.results = ps.executeQuery();
+            
+            this.results.next();
+            
+            pokemon.setPokemonID(this.results.getInt("pokemonID"));
+            pokemon.setPokemonName(this.results.getString("pokemonName"));
+            pokemon.setPokemonType(this.results.getString("pokemonType"));
+            pokemon.setPokemonCP(this.results.getInt("pokemonCP"));
+            pokemon.setPokemonCandy(this.results.getInt("pokemonCandy"));
+            
         } catch (SQLException ex) {
             Logger.getLogger(ReadRecord.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
 
+    }
+    
+    public Pokemons getPokemon() {
+    
+        return this.pokemon;
+        
     }
     
 }
