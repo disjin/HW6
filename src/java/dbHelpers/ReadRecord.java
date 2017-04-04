@@ -55,7 +55,7 @@ public class ReadRecord {
     
     }
     
-    public void doRead(){
+    public void doRead() {
         
         try {
             //set up a string to hold our query

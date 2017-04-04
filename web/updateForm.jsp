@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="model.Pokemons"%>
-<% Pokemons pokemon = (Pokemons) request.getAttribute("pokemon"); %>
+<% Pokemons pokemon = (Pokemons) request.getAttribute("pokemon");%>
 <!DOCTYPE html>
 <html>
     <head>
