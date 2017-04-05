@@ -77,6 +77,16 @@ public class SearchQuery {
         table += "</tr>";
           
         try {
+            if (!this.results.isBeforeFirst()){
+                
+                table += "<tr>";
+                table += "<td colspan='6'>Sorry, this pokemon does not exist in the database</td>";
+                table += "</tr>";
+            
+            }
+            
+            else {
+                
             while(this.results.next()){
                 
                 Pokemons pokemon = new Pokemons();
@@ -115,7 +125,7 @@ public class SearchQuery {
                 
             }
             
-
+        }
         
         } catch (SQLException ex) {
             Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
