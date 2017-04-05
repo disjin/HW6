@@ -9,15 +9,29 @@
     
     <% String table = (String) request.getAttribute("table"); %>
     <body>
-        <h1>Dishuang's Pokemons</h1>
-        <hr class="style">
+        <div class="wrap"> <!--div to hold all other divs -->
+            
+            <%@ include file="includes/header.jsp" %>
+            
+            <%@ include file="includes/menu.jsp" %>
+            
+            <div class="main"> <!--main div-->
+                
+                <h1>Dishuang's Pokemons</h1>
+                <hr class="style">
         
-        <%= table %>
+                <%= table %>
 
-        <br><br>
+                <br><br>
         
-        <a href ="add">Add A New Pokemon</a>
-        <br> <br>
-        <a href="search.jsp">Search Pokemons</a>
+                <a href ="add">Add A New Pokemon</a>
+                <br> <br>
+                <a href="search.jsp">Search Pokemons</a>
+        
+            </div> <!--close main div -->
+        
+            <%@ include file="includes/footer.jsp" %>
+        
+        </div> <!-- close the wrap div -->
     </body>
 </html>

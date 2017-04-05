@@ -13,15 +13,19 @@
             
             <%@ include file="includes/menu.jsp" %>
             
-            
-        <h1>My Pokemons Database</h1>
-        <hr class="style">
+            <div class="main"> <!--main div-->    
+                
+                <h1>My Pokemons Database</h1>
+                
+                <hr class="style">
         
-        <a href="read">View All Pokemons</a>
-        <br> <br>
-        <a href="search.jsp">Search Pokemons</a>
+                <a href="read">View All Pokemons</a>
+                <br> <br>
+                <a href="search.jsp">Search Pokemons</a>
+                
+            </div> <!--close main div -->
         
-        <!--footer-->
+        <%@ include file="includes/footer.jsp" %>
         
         </div> <!-- close the wrap div -->   
     </body>
