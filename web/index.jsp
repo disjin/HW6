@@ -7,6 +7,13 @@
         <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
     <body>
+        <div class="wrap"> <!--div to hold all other divs -->
+            
+            <%@ include file="includes/header.jsp" %>
+            
+            <%@ include file="includes/menu.jsp" %>
+            
+            
         <h1>My Pokemons Database</h1>
         <hr class="style">
         
@@ -14,5 +21,8 @@
         <br> <br>
         <a href="search.jsp">Search Pokemons</a>
         
+        <!--footer-->
+        
+        </div> <!-- close the wrap div -->   
     </body>
 </html>
