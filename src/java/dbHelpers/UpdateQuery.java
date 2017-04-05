@@ -15,7 +15,7 @@ public class UpdateQuery {
     
     private Connection conn;
     
-    public UpdateQuery() {
+    public UpdateQuery()  {
     
     try{
         Properties props = new Properties (); //MWC

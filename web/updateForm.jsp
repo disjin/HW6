@@ -20,7 +20,7 @@
                       Pokemon ID:  
                     </td>
                     <td class="left">
-                      <input type="text" name="id" value="<%= pokemon.getPokemonID() %>" />
+                      <input type="text" name="id" value="<%= pokemon.getPokemonID() %>" readonly />
                     </td>
                 </tr>
                 <tr>
