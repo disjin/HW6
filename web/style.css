@@ -9,7 +9,6 @@ table {
     background-color: #F08080;
 }
 
-
 th, td {
     padding: 2px;
     border: 2px solid #FFFFFF;
@@ -29,6 +28,8 @@ td {
     vertical-align: middle;
     color: #FFFFFF;  
 }
+
+input[readonly] {background-color:gray;}
 
 tr:nth-child(even) {background-color: #EDEDED;}
 
