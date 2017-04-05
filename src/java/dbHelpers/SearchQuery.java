@@ -50,10 +50,10 @@ public class SearchQuery {
     public void doSearch(String pokemonName) {
     
         try {
-            String query = "SELECT * FROM pokemons WHERE pokemonName LIKE ?";
+            String query = "SELECT * FROM pokemons WHERE UPPER(pokemonName) LIKE ? ORDER BY pokemonID ASC";
             
             PreparedStatement ps = conn.prepareStatement(query);
-            ps.setString(1, "%" + pokemonName + "%");
+            ps.setString(1, "%" + pokemonName.toUpperCase() + "%");
             this.results = ps.executeQuery();
         } catch (SQLException ex) {
             Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
