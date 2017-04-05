@@ -1,7 +1,7 @@
         <div class="header"> <!--header div-->
 		
 		<div class="headerImg"> <!--header image div -->
-			<img src="includes/pokemonLogo.png" height="150px" />
+			<img src="includes/pokemonLogo.png" height="75px" />
 		</div> <!-- close header image div -->
 			
 		<div class="headerText"> <!--header text div -->

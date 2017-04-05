@@ -7,7 +7,7 @@ body {
 
 /* formats the page header */
 .header {text-align:left; padding:25px;}
-.headerImg {float:left; width:200px;}
+.headerImg {float:left; width:230px; padding-top:42px; padding-left:20px;}
 .headerText {float:left; height:105px; padding-top:50px; padding-left:25px; }
 
 /* formats main page content */
